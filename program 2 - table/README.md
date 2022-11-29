@@ -1,0 +1,1 @@
+2. Write a single html program through which you can draw a table which consists of 3 row and 4 columns where 1st row contains 4 different column fields of a student’s information with red text color and Calibri font style with font 12. Rest cells of whole table contain values with blue text colors and Times new roman font style with font 10.

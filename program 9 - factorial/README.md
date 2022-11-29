@@ -1,0 +1,1 @@
+9. Write a html program to find out the factorial of a given input integer using javascript.

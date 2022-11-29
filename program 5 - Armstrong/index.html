@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Armstrong Number</title>
+    <style>
+        html,body{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .division{
+            width:40%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        label{
+            font-size: 16pt;
+        }
+        input{
+            padding: 5px 10px;
+            outline: none;
+            font-size: 14pt;
+           
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        button{
+            padding: 5px 10px;
+            font-size: 14pt;
+            background-color: rgb(0, 255, 120);
+            border-radius: 8px;
+        }
+        button:active{
+            background-color: rgb(8, 243, 180);
+        }
+           #fahrenheit{
+            font-size: 14pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="division">
+        <h1>Checking Armstrong</h1>
+        <label for="Armstrong">Enter any value</label><br>
+        <input type="text" id="value"><br>
+        <button type="submit" onclick="check();">CHECK</button><br>
+        <p id="answer"></p>
+    </div>
+
+<script type="text/javascript" defer>
+    function check(){
+        var num = document.getElementById("value").value;
+        var n = num;
+        var sum=0;
+        var answer="";
+        while(n!=0){
+            let mod = n%10;
+            sum=sum+Math.pow(mod,num.length);
+            n = parseInt(n / 10);
+        }
+        if(sum == num){
+            answer="Yes";
+        }
+        else{
+            answer="No";
+        }
+        document.getElementById("answer").innerHTML= answer;
+    }
+</script>
+</body></html>

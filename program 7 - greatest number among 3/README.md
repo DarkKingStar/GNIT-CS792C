@@ -1,0 +1,1 @@
+7. Write a html program to find out the greatest number among 3 input integer using javascript.

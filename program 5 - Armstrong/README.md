@@ -1,0 +1,1 @@
+5. Write a html program to check whether an integer no is Armstrong no or not using javascript.

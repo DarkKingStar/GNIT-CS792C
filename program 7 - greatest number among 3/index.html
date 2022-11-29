@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Greatest Number</title>
+    <style>
+        html,body{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .division{
+            width:40%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        label{
+            font-size: 16pt;
+        }
+        input{
+            padding: 5px 10px;
+            outline: none;
+            font-size: 14pt;
+           
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        button{
+            padding: 5px 10px;
+            color:white;
+            font-size: 14pt;
+            background-color: rgb(242, 0, 0);
+            border-radius: 8px;
+        }
+        button:active{
+            background-color: rgb(234, 105, 0);
+        }
+           #fahrenheit{
+            font-size: 14pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="division">
+        <h1>Finding Greatest Number</h1>
+        <label for="Number">Enter three values</label><br>
+        <input type="text" id="value1"><br>
+        <input type="text" id="value2"><br>
+        <input type="text" id="value3"><br>
+        <button type="submit" onclick="findgreatest();">Run</button><br>
+        <p id="answer"></p>
+    </div>
+
+<script type="text/javascript" defer>
+    function findgreatest(){
+        var n1 = document.getElementById("value1").value;
+        var n2 = document.getElementById("value2").value;
+        var n3 = document.getElementById("value3").value;
+        var answer = n1>n2?(n1>n3?n1:n3):(n2>n3?n2:n3);
+        document.getElementById("answer").innerHTML= answer;
+    }
+</script>
+</body></html>

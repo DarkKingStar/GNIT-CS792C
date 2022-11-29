@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Fibonacci Series</title>
+    <style>
+        html,body{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .division{
+            width:40%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        label{
+            font-size: 16pt;
+        }
+        input{
+            padding: 5px 10px;
+            outline: none;
+            font-size: 14pt;
+           
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        button{
+            padding: 5px 10px;
+            font-size: 14pt;
+            background-color: rgb(0, 242, 206);
+            border-radius: 8px;
+        }
+        button:active{
+            background-color: rgb(23, 85, 254);
+        }
+           #fahrenheit{
+            font-size: 14pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="division">
+        <h1>Fibonacci Series</h1>
+        <label for="number">Enter the n<sup>th </sup>term</label><br>
+        <input type="text" id="value"><br>
+        <button type="submit" onclick="runfunc();">Run</button><br>
+        <p id="answer"></p>
+    </div>
+
+<script type="text/javascript" defer>
+    function runfunc(){
+        var number = document.getElementById("value").value;
+        var answer="";
+        let n1 = 0, n2 = 1, nextTerm;
+        for (let i = 1; i <= number; i++) {
+            answer=answer+" "+n1;
+            nextTerm = n1 + n2;
+            n1 = n2;
+            n2 = nextTerm;
+        }
+        document.getElementById("answer").innerHTML= answer;
+    }
+</script>
+</body></html>

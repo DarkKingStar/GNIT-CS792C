@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Factorial</title>
+    <style>
+        html,body{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .division{
+            width:40%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        label{
+            font-size: 16pt;
+        }
+        input{
+            padding: 5px 10px;
+            outline: none;
+            font-size: 14pt;
+           
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        button{
+            padding: 5px 10px;
+            font-size: 14pt;
+            background-color: rgb(242, 157, 0);
+            border-radius: 8px;
+        }
+        button:active{
+            background-color: rgb(234, 222, 0);
+        }
+           #fahrenheit{
+            font-size: 14pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="division">
+        <h1>Factorial Calculator</h1>
+        <label for="Factorial">Enter a values</label><br>
+        <input type="text" id="value"><br>
+        <button type="submit" onclick="runfunc();">Find</button><br>
+        <p id="answer"></p>
+    </div>
+
+<script type="text/javascript" defer>
+    function runfunc(){
+        var number = document.getElementById("value").value;
+        var answer="";
+        if (number < 0) {
+            answer='Error! Factorial for negative number does not exist.';
+        }
+        // if number is 0
+        else if (number === 0) {
+            answer=`The factorial of ${number} is 1.`;
+        }
+        // if number is positive
+        else {
+            let fact = 1;
+            for (i = 1; i <= number; i++) {
+                fact *= i;
+            }
+            answer=`The factorial of ${number} is ${fact}.`;
+        }
+        document.getElementById("answer").innerHTML= answer;
+    }
+</script>
+</body></html>

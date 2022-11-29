@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paragraph external and internal css</title>
+        <link rel="stylesheet" href="./style.css">
+        <style>
+            .paragraph{
+                width: fit-content;
+                margin: 20px auto;
+            }
+            .paragraph > p:first-child{
+                color: red;
+                font-size: 20pt;
+                background-color: yellow;
+                text-align: center;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <div class="paragraph">
+            <p>Hello, I'm a programmer,</p>
+            <p>Here are some text that you can see but can't write because this is default</p>
+        </div>
+    </body>
+
+</html>

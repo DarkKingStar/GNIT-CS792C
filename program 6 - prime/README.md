@@ -1,0 +1,1 @@
+6. Write a html program to check whether an integer no is prime no or not using javascript.

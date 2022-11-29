@@ -1,0 +1,1 @@
+3. Write a single html program where 1st paragraph can collect its specified style from internal stylesheet describes inside that html program and 2nd paragraph can collect its specified style from another file (external stylesheet).

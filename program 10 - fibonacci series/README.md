@@ -1,0 +1,1 @@
+10. Write a html program to print Fibonacci series for first “n” number using javascript. [note: if n=7 then fibonacci series will be  0 1 1 2 3 5 8]

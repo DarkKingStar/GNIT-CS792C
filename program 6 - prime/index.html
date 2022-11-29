@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Prime Number</title>
+    <style>
+        html,body{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .division{
+            width:40%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        label{
+            font-size: 16pt;
+        }
+        input{
+            padding: 5px 10px;
+            outline: none;
+            font-size: 14pt;
+           
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        button{
+            padding: 5px 10px;
+            font-size: 14pt;
+            background-color: rgb(0, 24, 242);
+            border-radius: 8px;
+        }
+        button:active{
+            background-color: rgb(152, 0, 234);
+        }
+           #fahrenheit{
+            font-size: 14pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="division">
+        <h1>Checking Prime Number</h1>
+        <label for="Prime">Enter any value</label><br>
+        <input type="text" id="value"><br>
+        <button type="submit" onclick="check();">CHECK</button><br>
+        <p id="answer"></p>
+    </div>
+
+<script type="text/javascript" defer>
+    function check(){
+        var number = document.getElementById("value").value;
+        let isPrime = true;
+        var answer="";
+        if(number === 1) {
+            answer="1 is neither prime nor composite number.";
+        }
+        else if(number > 1) {
+            for(let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if(isPrime) {
+                answer=`${number} is a prime number`;
+            }
+            else {
+                answer=`${number} is a not prime number`;
+            }
+        }
+        document.getElementById("answer").innerHTML= answer;
+    }
+</script>
+</body></html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Celsius to Fahrenheit</title>
+        <style>
+            html,body{
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .division{
+                width:40%;
+                margin: 20px auto;
+                text-align: center;
+            }
+            label{
+                font-size: 16pt;
+            }
+            input{
+                padding: 5px 10px;
+                outline: none;
+                font-size: 14pt;
+                border: 0;
+                border-bottom: 1px solid black;
+                text-align: center;
+            }
+            button{
+                padding: 5px 10px;
+                font-size: 14pt;
+                background-color: yellowgreen;
+                border-radius: 8px;
+            }
+            button:active{
+                background-color: gold;
+            }
+               #fahrenheit{
+                font-size: 14pt;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="division">
+            <h1>Fahrenheit Converter</h1>
+            <label for="celsius">Enter a value of temperature in celsius</label><br/>
+            <p><input type="text" id="value"/>°C</p>
+            <button type="submit" onclick="convert();">SUBMIT</button><br/>
+            <p id="fahrenheit">??°F</p>
+        </div>
+    </body>
+    <script type="text/javascript" defer>
+        function convert(){
+            var celsius = document.getElementById("value").value;
+            var fahrenheit = (celsius * (9/5)) + 32;
+            document.getElementById("fahrenheit").innerHTML= fahrenheit+"°F";
+        }
+    </script>
+</html>
